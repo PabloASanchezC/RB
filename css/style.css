@@ -1,0 +1,196 @@
+:root {
+  /* === Paleta Base (Identidad Rancho La Bendición) === */
+  --color-lona: #f9f7f2; /* Fondo general (blanco rústico) */
+  --color-bronce: #734329; /* Primario (herradura / madera) */
+  --color-agave: #6b8372; /* Secundario (vegetación / naturaleza) */
+  --color-atardecer: #d88c64; /* Acento (etiquetas / detalles) */
+  --color-carbon: #2b2624; /* Texto principal */
+
+  /* === Variaciones para estados (Hover y superficies) === */
+  --color-bronce-hover: #5a331e;
+  --color-agave-hover: #556b5b;
+  --color-atardecer-hover: #c07650;
+  --color-lona-alt: #efece4; /* Secciones alternas o fondos suaves */
+  --color-superficie: #ffffff; /* Tarjetas e inputs */
+  --color-texto-suave: #5c534e; /* Subtítulos, metadatos y placeholders */
+  --color-borde: #e2ddd3; /* Líneas divisorias y bordes de tarjetas */
+  --color-lona-rgb: 249, 247, 242; /* Para sombras cálidas y degradados */
+
+  /* === Tokens Semánticos (Uso en componentes) === */
+  --bg-page: var(--color-lona);
+  --bg-section-alt: var(--color-lona-alt);
+  --bg-card: var(--color-superficie);
+
+  --text-primary: var(--color-carbon);
+  --text-secondary: var(--color-texto-suave);
+  --text-inverse: var(--color-lona);
+
+  --btn-primary-bg: var(--color-bronce);
+  --btn-primary-hover: var(--color-bronce-hover);
+  --btn-secondary-bg: var(--color-agave);
+  --btn-secondary-hover: var(--color-agave-hover);
+  --badge-accent-bg: var(--color-atardecer);
+
+  /* === Sombras cálidas (tinte basado en Carbón Tierra) === */
+  --shadow-sm: 0 2px 8px rgba(43, 38, 36, 0.06);
+  --shadow-md: 0 8px 24px rgba(43, 38, 36, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-lona);
+}
+
+.navbar {
+  background-color: var(--color-lona);
+  font-family: "Montserrat", sans-serif;
+  height: 100px;
+}
+
+.navbar-brand img {
+  height: 80px;
+}
+
+.navbar-nav {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+nav .btn {
+  background-color: var(--color-bronce);
+  color:#ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 20px;
+}
+
+nav .btn:hover {
+  background-color: var(--color-bronce-hover);
+  color:#ffffff;
+}
+
+main {
+  flex: 1;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-image:
+    radial-gradient(
+      ellipse 75% 220% at 88% 50%,
+      rgba(var(--color-lona-rgb), 1) 30%,
+      rgba(var(--color-lona-rgb), 0) 80%
+    ),
+    url("../assets/images/fondohero.png");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50vw;
+  padding: 0 40px;
+}
+
+.hero-h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 72px;
+  text-align: end;
+  color: var(--color-bronce);
+}
+
+.hero-p {
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  text-align: end;
+  color: var(--color-carbon);
+  width: 85%;
+  line-height: 160%;
+}
+
+.hero .btn {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-bronce);
+  color:#ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 20px;
+}
+
+.hero .btn:hover {
+  background-color: var(--color-bronce-hover);
+  color:#ffffff;
+}
+
+.hero .btn-secondary-RB {
+  background-color: var(--color-agave);
+}
+
+.hero .btn-secondary-RB:hover {
+  background-color: var(--color-agave-hover);
+}
+
+.img-card {
+  width: 100%;
+  height: 138px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+}
+
+.img-restaurant {
+  background-image: url("../assets/images/buffet.png");
+}
+
+.card-body-RB {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.card-h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-p {
+  font-size: 16px;
+  font-weight: 500;
+  width: 70%;
+  margin: 0;
+}
+
+.card-body-RB .btn-secondary-RB {
+  width: fit-content;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-agave);
+  color:#ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 20px;
+  line-height: 100%;
+}

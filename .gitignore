@@ -1,0 +1,31 @@
+# Sistema operativo (Linux / macOS / Windows)
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# Editores (VS Code / Remote SSH)
+.vscode/
+*.code-workspace
+
+# Logs y temporales
+*.log
+*.tmp
+.cache/
+
+# Variables de entorno y credenciales (por si luego agregas APIs o formularios)
+.env
+.env.local
+.env.*.local
+
+# Dependencias y compilaciones (por si luego integras npm, Vite o Sass)
+node_modules/
+dist/
+build/
+
+# Archivos de diseño editables (evita subir archivos pesados al repo)
+*.psd
+*.ai
+*.fig
+*.xd
